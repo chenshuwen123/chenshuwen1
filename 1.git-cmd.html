@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	 1.git init //初始化仓库
+新建一个文件：readMe.md
+2.git status //查看文件夹状态
+3.git add  //提交文件
+4.此时再查看文件夹状态,提交的文件变绿，说明已提交
+5.git commit -m "/*注释，备忘录*/"
+此时已经有主干
+之后再创建分支
+
+git diff //查看更改前后的差别
+git branch //查看分支
+git branch+分支名 //只创建分支，不替换分支
+git checkout -b //创建并替换分支
+git checkout htgl-a(分支名) //切换分支
+切换分支时有些目录没删掉，解决办法：自己手动删除
+主干分支只有readMe.md
+
+git add *
+git commit -m "update index.html" //提交
+git log //查看提交历史
+git log --graph //查看提交状态
+git reset --hard d8e4e5f153d14de60b399affd2cda5a3cd61426e  //回溯到之前的某一状态
+git checkout htgl-a //切换到htgl-a分支
+git merge htgl-b//分之合并
+HEAD:主干上的内容
+剩下的：另一分支的内容
+合共上绿色的线代表合并
+
+git log --graph后按q重新操作
+git checkout - //切换到上一分支
+//切换到不同分支，文件夹的状态是不一样的，不会相互影响
+
+ps:
+做首页一个分支(a)
+购物车一个分支(b)
+主干文件就是初始化的文件
+做完后将首页的文件合并到主干上
+购物车做完后合并到主干上
+在主干上可以来回切换分支状态
+
+
+git remote add origin git@github.com:milkfei119/h51614.git
+ //完成主机与网上认证
+git pull origin master --allow-unrelated-histories //把github上的内容强行与本地同步
+git push -u origin master  //向网站推送，第一次推送一定要写 -u origin 两个参数
+之后再推送直接 git push
+
+从github往本地库拉文件用git pull
+选好指定的文件夹 git pull  ok!
+从本地库往github推文件用git push
+推：在本地库新建一个文件、git status,git add *,git commit -m "",git push  ok!
+
+在workspace创建一个新文件夹：
+git clone https://github.com/milkfei119/h51614.git  从github上克隆一个文件夹
+https://...... 在github点clone or download
+
+
+
+
+D:\hbj1614\workspace\backstage management>git log
+commit 998f6435be85c84c8312998073ef1e0aa2a884bb
+Author: milkfei119 <771482938@qq.com>
+Date:   Tue Nov 1 11:02:35 2016 +0800
+
+    update index.html
+
+commit f7f570a42b415416a7eb5f93144e5bbf842724bc
+Author: milkfei119 <771482938@qq.com>
+Date:   Tue Nov 1 10:53:21 2016 +0800
+
+    update index.html
+
+commit d8e4e5f153d14de60b399affd2cda5a3cd61426e
+Author: milkfei119 <771482938@qq.com>
+Date:   Tue Nov 1 10:12:22 2016 +0800
+
+    Hello World
+
+D:\hbj1614\workspace\backstage management>git checkout htgl-b
+Switched to branch 'htgl-b'
+
+D:\hbj1614\workspace\backstage management>git branch
+  htgl-a
+* htgl-b
+  master
+
+D:\hbj1614\workspace\backstage management>git status
+On branch htgl-b
+nothing to commit, working directory clean
+
+D:\hbj1614\workspace\backstage management>git status
+On branch htgl-b
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\hbj1614\workspace\backstage management>git add *
+
+D:\hbj1614\workspace\backstage management>git commit -m "working for 1 day over"
+
+[htgl-b 81fde63] working for 1 day over
+ 2 files changed, 1 insertion(+)
+ create mode 100644 index.css
+
+D:\hbj1614\workspace\backstage management>git branch
+  htgl-a
+* htgl-b
+  master
+
+D:\hbj1614\workspace\backstage management>git checkout -
+Switched to branch 'htgl-a'
+
+D:\hbj1614\workspace\backstage management>git branch
+* htgl-a
+  htgl-b
+  master
+
+D:\hbj1614\workspace\backstage management>git checkout master
+Switched to branch 'master'
+
+D:\hbj1614\workspace\backstage management>git diff
+
+D:\hbj1614\workspace\backstage management>git log --graph
+* commit f7f570a42b415416a7eb5f93144e5bbf842724bc
+| Author: milkfei119 <771482938@qq.com>
+| Date:   Tue Nov 1 10:53:21 2016 +0800
+|
+|     update index.html
+|
+* commit d8e4e5f153d14de60b399affd2cda5a3cd61426e
+  Author: milkfei119 <771482938@qq.com>
+  Date:   Tue Nov 1 10:12:22 2016 +0800
+
+      Hello World
+
+D:\hbj1614\workspace\backstage management>git checkout htgl-b
+Switched to branch 'htgl-b'
+
+D:\hbj1614\workspace\backstage management>git log --graph
+* commit 81fde6308543f9f787a34cc0132cb5466d506aac
+| Author: milkfei119 <771482938@qq.com>
+| Date:   Tue Nov 1 11:15:52 2016 +0800
+|
+|     working for 1 day over
+|
+* commit f7f570a42b415416a7eb5f93144e5bbf842724bc
+| Author: milkfei119 <771482938@qq.com>
+| Date:   Tue Nov 1 10:53:21 2016 +0800
+|
+|     update index.html
+|
+* commit d8e4e5f153d14de60b399affd2cda5a3cd61426e
+  Author: milkfei119 <771482938@qq.com>
+  Date:   Tue Nov 1 10:12:22 2016 +0800
+
+      Hello World
+
+D:\hbj1614\workspace\backstage management>git rest git d8e4e5f153d14de60b399affd
+2cda5a3cd61426e
+git: 'rest' is not a git command. See 'git --help'.
+
+Did you mean this?
+        reset
+
+D:\hbj1614\workspace\backstage management>reset
+无效参数
+RESET { SESSION }
+
+D:\hbj1614\workspace\backstage management>git reset --hard d8e4e5f153d14de60b399
+affd2cda5a3cd61426e
+HEAD is now at d8e4e5f Hello World
+
+D:\hbj1614\workspace\backstage management>git log
+commit d8e4e5f153d14de60b399affd2cda5a3cd61426e
+Author: milkfei119 <771482938@qq.com>
+Date:   Tue Nov 1 10:12:22 2016 +0800
+
+    Hello World
+
+D:\hbj1614\workspace\backstage management>git checkout -
+Switched to branch 'master'
+
+D:\hbj1614\workspace\backstage management>git log
+commit f7f570a42b415416a7eb5f93144e5bbf842724bc
+Author: milkfei119 <771482938@qq.com>
+Date:   Tue Nov 1 10:53:21 2016 +0800
+
+    update index.html
+
+commit d8e4e5f153d14de60b399affd2cda5a3cd61426e
+Author: milkfei119 <771482938@qq.com>
+Date:   Tue Nov 1 10:12:22 2016 +0800
+
+    Hello World
+
+D:\hbj1614\workspace\backstage management>git checkout htgl-b
+Switched to branch 'htgl-b'
+
+D:\hbj1614\workspace\backstage management>git log
+commit d8e4e5f153d14de60b399affd2cda5a3cd61426e
+Author: milkfei119 <771482938@qq.com>
+Date:   Tue Nov 1 10:12:22 2016 +0800
+
+    Hello World
+
+D:\hbj1614\workspace\backstage management>git branch
+  htgl-a
+* htgl-b
+  master
+
+D:\hbj1614\workspace\backstage management>git status
+On branch htgl-b
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        index.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\hbj1614\workspace\backstage management>git add *
+
+D:\hbj1614\workspace\backstage management>git commit -m "给index.html添加样式表"
+
+[htgl-b d08eca8] 给index.html添加样式表
+ 2 files changed, 19 insertions(+)
+ create mode 100644 index.css
+
+Warning: Your console font probably doesn't support Unicode. If you experience s
+trange characters in the output, consider switching to a TrueType font such as C
+onsolas!
+
+D:\hbj1614\workspace\backstage management>git checkbox htgl-a
+git: 'checkbox' is not a git command. See 'git --help'.
+
+D:\hbj1614\workspace\backstage management>git checkout htgl-a
+Switched to branch 'htgl-a'
+
+D:\hbj1614\workspace\backstage management>git checkout htgl-b
+Switched to branch 'htgl-b'
+
+D:\hbj1614\workspace\backstage management>git checkout -
+Switched to branch 'htgl-a'
+
+D:\hbj1614\workspace\backstage management>git merge htgl-b
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+D:\hbj1614\workspace\backstage management>git status
+On branch htgl-a
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+
+Changes to be committed:
+
+        new file:   index.css
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   index.html
+
+
+D:\hbj1614\workspace\backstage management>git add index.html
+
+D:\hbj1614\workspace\backstage management>git commit -m "把分支b上的内容合并在主
+干上"
+[htgl-a c8166ad] 把分支b上的内容合并在主干上
+
+Warning: Your console font probably doesn't support Unicode. If you experience s
+trange characters in the output, consider switching to a TrueType font such as C
+onsolas!
+
+D:\hbj1614\workspace\backstage management>git branch
+* htgl-a
+  htgl-b
+  master
+
+D:\hbj1614\workspace\backstage management>git checkout htgl-a
+Already on 'htgl-a'
+
+D:\hbj1614\workspace\backstage management>git commit -m "把分支b上的内容合并在主
+干上"
+On branch htgl-a
+nothing to commit, working directory clean
+
+D:\hbj1614\workspace\backstage management>git log --graph
+*   commit c8166adb8a26e4cd6e8abdc85dfec698090ba94f
+*   commit c8166adb8a26e4cd6e8abdc85dfec698090ba94f
+|\  Merge: 998f643 d08eca8
+| | Author: milkfei119 <771482938@qq.com>
+| | Date:   Tue Nov 1 11:41:19 2016 +0800
+| |
+| |     把分支b上的内容合并在主干上
+| |
+| * commit d08eca86c2d229432d54ebc8690df19b5c04e4e2
+| | Author: milkfei119 <771482938@qq.com>
+| | Date:   Tue Nov 1 11:30:10 2016 +0800
+| |
+| |     给index.html添加样式表
+| |
+* | commit 998f6435be85c84c8312998073ef1e0aa2a884bb
+| | Author: milkfei119 <771482938@qq.com>
+| | Date:   Tue Nov 1 11:02:35 2016 +0800
+| |
+| |     update index.html
+| |
+* | commit f7f570a42b415416a7eb5f93144e5bbf842724bc
+|/  Author: milkfei119 <771482938@qq.com>
+|   Date:   Tue Nov 1 10:53:21 2016 +0800
+|
+|       update index.html
+|
+
+D:\hbj1614\workspace\backstage management>git branch
+* htgl-a
+  htgl-b
+  master
+
+D:\hbj1614\workspace\backstage management>git checkout -
+M       "\346\226\260\345\273\272\346\226\207\346\234\254\346\226\207\346\241\24
+3.txt"
+Already on 'htgl-a'
+
+D:\hbj1614\workspace\backstage management>git checkout master
+M       "\346\226\260\345\273\272\346\226\207\346\234\254\346\226\207\346\241\24
+3.txt"
+Switched to branch 'master'
+
+D:\hbj1614\workspace\backstage management>git log --graph
+* commit f7f570a42b415416a7eb5f93144e5bbf842724bc
+| Author: milkfei119 <771482938@qq.com>
+| Date:   Tue Nov 1 10:53:21 2016 +0800
+|
+|     update index.html
+|
+* commit d8e4e5f153d14de60b399affd2cda5a3cd61426e
+  Author: milkfei119 <771482938@qq.com>
+  Date:   Tue Nov 1 10:12:22 2016 +0800
+
+      Hello World
+
+D:\hbj1614\workspace\backstage management>
+
+
+
+/******************下午*****************/
+ 卷的序列号是 0002-2738
+
+ D:\hbj1614\workspace\yztc_repo 的目录
+
+2016/11/01  15:01    <DIR>          .
+2016/11/01  15:01    <DIR>          ..
+2016/11/01  15:01    <DIR>          js
+2016/11/01  14:46               118 readMe.md
+               1 个文件            118 字节
+               3 个目录 74,912,514,048 可用字节
+
+D:\hbj1614\workspace\yztc_repo>git remote add origin git@github.com:milkfei119/h
+51614.git
+
+D:\hbj1614\workspace\yztc_repo>git branch
+  htmlcss
+* js
+  master
+
+D:\hbj1614\workspace\yztc_repo>git checkout master
+Switched to branch 'master'
+
+D:\hbj1614\workspace\yztc_repo>git push -u origin master
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+To git@github.com:milkfei119/h51614.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:milkfei119/h51614.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+D:\hbj1614\workspace\yztc_repo>git pull
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+warning: no common commits
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:milkfei119/h51614
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+D:\hbj1614\workspace\yztc_repo>git push -u origin master
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+To git@github.com:milkfei119/h51614.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:milkfei119/h51614.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+D:\hbj1614\workspace\yztc_repo>git push --help
+Launching default browser to display HTML ...
+
+D:\hbj1614\workspace\yztc_repo>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        feifei.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\hbj1614\workspace\yztc_repo>git add *
+
+D:\hbj1614\workspace\yztc_repo>git commit -m "feifei"
+[master d09341d] feifei
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feifei.txt
+
+D:\hbj1614\workspace\yztc_repo>git push -u origin master
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+To git@github.com:milkfei119/h51614.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:milkfei119/h51614.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+D:\hbj1614\workspace\yztc_repo>git pull
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+D:\hbj1614\workspace\yztc_repo>git push -u origin master
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+To git@github.com:milkfei119/h51614.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:milkfei119/h51614.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+D:\hbj1614\workspace\yztc_repo>git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+D:\hbj1614\workspace\yztc_repo>git push master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\hbj1614\workspace\yztc_repo>git remote add origin git@github.com:milkfei119/h
+51614.git
+fatal: remote origin already exists.
+
+D:\hbj1614\workspace\yztc_repo>git pull
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+D:\hbj1614\workspace\yztc_repo>git push -u origin master
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+To git@github.com:milkfei119/h51614.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:milkfei119/h51614.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+D:\hbj1614\workspace\yztc_repo>q
+'q' 不是内部或外部命令，也不是可运行的程序
+或批处理文件。
+
+D:\hbj1614\workspace\yztc_repo>dir
+ 驱动器 D 中的卷是 软件
+ 卷的序列号是 0002-2738
+
+ D:\hbj1614\workspace\yztc_repo 的目录
+
+2016/11/01  15:26    <DIR>          .
+2016/11/01  15:26    <DIR>          ..
+2016/11/01  15:26                 3 feifei.txt
+2016/11/01  15:17    <DIR>          js
+2016/11/01  14:46               118 readMe.md
+               2 个文件            121 字节
+               3 个目录 74,923,974,656 可用字节
+
+D:\hbj1614\workspace\yztc_repo>git branch
+  htmlcss
+  js
+* master
+
+D:\hbj1614\workspace\yztc_repo>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        zuoye.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\hbj1614\workspace\yztc_repo>git add *
+
+D:\hbj1614\workspace\yztc_repo>git commit -m "homework"
+[master b5c478d] homework
+ 1 file changed, 1 insertion(+)
+ create mode 100644 zuoye.txt
+
+D:\hbj1614\workspace\yztc_repo>git remote add origin git@github.com:milkfei119/h
+51614.git
+fatal: remote origin already exists.
+
+D:\hbj1614\workspace\yztc_repo>git pull origin master --allow-unrelated-historie
+s
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+From github.com:milkfei119/h51614
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+D:\hbj1614\workspace\yztc_repo>git push -u origin master
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (11/11), 1004 bytes | 0 bytes/s, done.
+Total 11 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To git@github.com:milkfei119/h51614.git
+   37237ef..3fc4000  master -> master
+Branch master set up to track remote branch master from origin.
+
+D:\hbj1614\workspace\yztc_repo>cd..
+
+D:\hbj1614\workspace>cd test
+系统找不到指定的路径。
+
+D:\hbj1614\workspace>cd test
+
+D:\hbj1614\workspace\test>git clone https://github.com/milkfei119/h51614.git
+Cloning into 'h51614'...
+remote: Counting objects: 14, done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 14 (delta 2), reused 11 (delta 2), pack-reused 0
+Unpacking objects: 100% (14/14), done.
+Checking connectivity... done.
+
+D:\hbj1614\workspace\test>cd..
+
+D:\hbj1614\workspace>cd homework
+
+D:\hbj1614\workspace\homework>cd..
+
+D:\hbj1614\workspace>cd test
+
+D:\hbj1614\workspace\test>cd h51614
+
+D:\hbj1614\workspace\test\h51614>cd..
+
+D:\hbj1614\workspace\test>cd..
+
+D:\hbj1614\workspace>cd yztc_repo
+
+D:\hbj1614\workspace\yztc_repo>git pull
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:milkfei119/h51614
+   3fc4000..e602ea4  master     -> origin/master
+Updating 3fc4000..e602ea4
+Fast-forward
+ aifei.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 aifei.txt
+
+D:\hbj1614\workspace\yztc_repo>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   readMe.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        tui.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\hbj1614\workspace\yztc_repo>git add *
+
+D:\hbj1614\workspace\yztc_repo>git commit -m "push txt"
+[master 3264b88] push txt
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+ create mode 100644 tui.txt
+
+D:\hbj1614\workspace\yztc_repo>git push
+Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 268 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To git@github.com:milkfei119/h51614.git
+   e602ea4..3264b88  master -> master
+
+D:\hbj1614\workspace\yztc_repo>
+
+	<script>
+		/*
+			
+		*/
+	</script>
+</body>
+</html>
