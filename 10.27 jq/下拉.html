@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉</title>
+	<script src='../jquery-3.1.1.js'></script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>1</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+	</div>
+	<div id="show">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<script>
+		$(function (){
+			$('*').css({margin:0,padding:0})
+			$('li').css({
+						'list-style':'none',
+						'width':'100px',
+						'height':'30px',
+						'background':'gold',
+						'display':'inline-block',
+			})
+			$('#show div').css({width:'400px',height:'200px','background':'red','display':'none'});
+			$('li:first').on('mouseenter',function(){
+				console.log($(this).length);
+				$('#show div:first').slideDown(100)
+			})
+
+		})
+		
+	</script>
+</body>
+</html>

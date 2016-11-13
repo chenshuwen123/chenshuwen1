@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东</title>
+	<script src='../jquery-3.1.1.js'></script>
+	<link rel="stylesheet" href="jingdong.css">
+	<style>
+		
+	</style>
+</head>
+<body>	
+	<div id="header">
+		<ul id="headerL">
+			<li>
+				<div class="class1 red">送至:北京</div>	
+				<div class="show"></div>		
+			</li>		
+		</ul>
+		<ul id="rightUl">
+			<li ><a href="#" class='red'>你好,请登陆</a> <span id='span1'><a href="#" style="color:red">免费注册</a></span></li>
+			<li class='red'><a href="#" class='red'>我的订单</a></li>
+			<li>
+				<div class="rtB"> <a href="#" class='red'>我的京东</a></div>
+				<div class="rt1" id="wD">我的京东</div>
+			</li>
+			<li ><a href="#" class='red'>京东会员</a></li>
+			<li ><a href="#" class='red'>企业采购</a></li>
+			<li>
+				<div><a href="#"  class='red'>手机京东</a>
+			</li>
+			<li>
+				<div ><a href="#" class='red'>关注京东</a>
+			</li>
+			<li>
+				<div class="rtB"><a href="#">客户服务</a></div>
+				<div class="rt1" id="right-ke">客户服务</div>
+			</li>
+			<li>
+				<div class="rtB"><a href="#">网站导航</a></div>
+				<div class="rt1" id="rightW">网站导航</div>
+
+			</li>
+		</ul>
+	</div>
+	<div id="nav">
+		<img src="images/1.jpg" alt="" class="img">
+		<!-- <div class="navG"></div> -->
+		<div class="nav1">
+			<img src="images/2.jpg" alt="" class="img1"><span> &nbsp 多 快  好 省</span>
+			
+		</div>
+		<div class="nav2">
+			<input type="text" value="起飞"><button>搜索</button>
+			<ul>
+				<li><a href="#">低至5折</a></li>
+				<li><a href="#">数码11.11</a></li>
+				<li><a href="#">300元劵</a></li>
+				<li><a href="">家电5折</a></li>
+				<li><a href="#">五折爆款</a></li>
+				<li><a href="#">皮裤女</a></li>
+				<li><a href="#">水晶头</a></li>
+				<li><a href="#">爆品9块9</a></li>
+				<li><a href="#">汽车</a></li>
+			</ul>
+		</div>
+		<div id="gouwu">
+				<div class="wu1">
+					<img src="images/gouwu.jpg" alt=""> 我的购物车 
+					<i class='gt'> ></i>						
+				 </div>
+				 <i id='shop'>0</i>	
+				<div class="wu2"></div>		
+		</div>
+	</div>
+
+
+	<div id="nav-d">
+			<div class="nav-left"><a href="#">全部商品</a></div>
+			<div class="nav-right">
+				<ul class="shi-li">
+					<li><a href="#">服装城</a></li>
+					<li><a href="#">美妆馆</a></li>
+					<li><a href="#">京东超市</a></li>
+					<li><a href="#">生鲜</a></li>
+					<li><a href="#">全球购</a></li>
+					<li><a href="#">闪购</a></li>
+					<li><a href="#">团购</a></li>
+					<li><a href="#">拍卖</a></li>
+					<li><a href="#">金融</a></li>
+				</ul>
+			</div>	
+			<div class="picB">
+				<a href="#" class="shiwan"><img src="images/shiwan.jpg" alt=""></a>
+			</div>		
+	</div>
+
+	<div id="main">
+			<div class="mLeft">
+			 <ul id="show-ul">
+				<li click-index='1'>
+					<a href="#">电脑家电</a>
+					<div class="show-div">电脑家电</div>
+				</li>
+				<li click-index='2'>
+					<a href="#">手机、运营商、数码</a>
+					<div class="show-div">手机、运营商、数码</div>	
+				</li>
+				<li click-index='3'>
+					<a href="#">电脑、办公</a>
+					<div class="show-div">电脑、办公</div>	
+
+				</li>
+				<li click-index='4'>
+					<a href="#">家居、家具、家装</a>
+					<div class="show-div">家居、家具、家装</div>							
+				</li>
+				<li click-index='5'>
+					<a href="#">男装、女装、童装、内衣</a>
+					<div class="show-div">男装、女装、童装、内衣</div>	
+
+				</li>
+				<li click-index='6'>
+					<a href="#">个人化妆、清洁用民、宠物</a>
+					<div class="show-div">个人化妆、清洁用民、宠物</div>	
+
+				</li>
+				<li click-index='7'>
+					<a href="#">鞋靴、箱包、珠宝、奢饰品</a>
+					<div class="show-div">鞋靴、箱包、珠宝、奢饰品</div>	
+
+				</li>
+				<li click-index='8'>
+					<a href="#">运动、户外、钟表</a>
+					<div class="show-div">运动、户外、钟表</div>	
+
+				</li>
+				<li click-index='9'>
+					<a href="#">汽车、汽车用品</a>
+					<div class="show-div">汽车、汽车用品</div>	
+
+				</li>
+				<li click-index='10'>
+					<a href="#">母婴、玩具乐器</a>
+					<div class="show-div">母婴、玩具乐器</div>	
+
+				</li>
+				<li click-index='11'>
+					<a href="#">食品、酒类、生鲜、特产</a>
+					<div class="show-div">食品、酒类、生鲜、特产</div>						
+				</li>
+				<li click-index='12'>
+					<a href="#">医药保健</a>
+					<div class="show-div">医药保健</div>	
+
+				</li>
+				<li click-index='13'>
+					<a href="#">图书、音像、电子书</a>
+					<div class="show-div">图书、音像、电子书</div>	
+				</li>
+				<li click-index='14'>
+					<a href="#">彩票、旅行、充值、票务</a>
+					<div class="show-div">彩票、旅行、充值、票务</div>	
+				</li>
+				<li click-index='15'>
+					<a href="#">理财、众筹、白条、保险</a>
+					<div class="show-div">理财、众筹、白条、保险</div>	
+
+				</li>
+				</ul> 
+			</div>
+	<!-- 图片部分 -->
+			<div id="main-center" class="=changImg">
+				<img src="images/img1.jpg" alt=""  class="images">
+				<div class="a-num">
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+				</div>
+				<div class="dayu">></div>
+				<div class="xiaoyu"><</div>
+			</div>
+			<!-- right -->
+			<div id="main-right">
+				<div class="m_right">
+					<h2>京东快报<a href="#" class="gengD">更多></a></h2>
+				</div>
+				<!-- 2 -->
+				<div class="mr">
+					<ul>
+						<li><a href="#"><span>[特惠]</span>宠主精明够:猫狗粮买三免一</a></li>
+						<li><a href="#"><span>[公告]</span>来京东老友记 享E卡等好礼</a></li>
+						<li><a href="#"><span>[特惠]</span>买手机享20天低价保障</a></li>
+						<li><a href="#"><span>[公告]</span>东莞大件运营中心开仓公告</a></li>
+						<li><a href="#"><span>[特惠]</span>每日折扣京东品质游</a></li>
+					</ul>
+				</div>
+				<!-- 3 -->
+				<div class="main-cai">
+					<ul class="right-go">
+						<li class="shouDiv"><a href="#"><i><img src="images/bg1.jpg" alt=""></i><br /><span class='main_text'>话费</span></a></li>	
+						<li class="shouDiv"><a href="#"><i><img src="images/bg2.jpg" alt=""></i><br /><span class='main_text'>机票</span></a></li>
+						<li class="shouDiv"><a href="#"><i><img src="images/bg3.jpg" alt=""></i><br /><span class='main_text'>电影票</span></a></li>
+						<li class="shouDiv"><a href="#"><i><img src="images/bg4.jpg" alt=""></i><br /><span class='main_text'>游戏</span></a></li>
+						<li><a href="#"><i><img src="images/bg5.jpg" alt=""></i><br /><span class='main_text'>企业购</span></a></li>
+						<li><a href="#"><i><img src="images/bg6.jpg" alt=""></i><br /><span class='main_text'>加油卡</span></a></li>
+						<li><a href="#"><i><img src="images/bg7.jpg" alt=""></i><br /><span class='main_text'>酒店</span></a></li>
+						<li><a href="#"><i><img src="images/bg8.jpg" alt=""></i><br /><span class='main_text'>火车票</span></a></li>
+						<li><a href="#"><i><img src="images/bg9.jpg" alt=""></i><br /><span class='main_text'>众筹</span></a></li>
+						<li><a href="#"><i><img src="images/bg10.jpg" alt=""></i><br /><span class='main_text'>理财</span></a></li>
+						<li><a href="#"><i><img src="images/bg11.jpg" alt=""></i><br /><span class='main_text'>礼品卡</span></a></li>
+						<li><a href="#"><i><img src="images/bg12.jpg" alt=""></i><br /><span class='main_text'>白条</span></a></li>
+					</ul>
+				
+					<div>
+						<div class="mydiv-show">
+							<ul class="li-two">
+								<li><a href="#">话费</a></li>
+								<li><a href="#">机票</a></li>
+								<li><a href="#">电影票</a></li>
+								<li><a href="#">游戏</a></li>
+							</ul>
+							<div>
+							<!-- 2级滑动菜单 -->
+								<div class="div-two">
+									<ul>
+										<li><a href="#">话费充值</a></li>
+										<li><a href="#">流量</a></li>
+										<li><a href="#">套餐变更</a></li>
+									</ul>
+								<!-- 总div？ -->
+									<div>
+								<!-- 1 -->
+										<div class="divS" style="display:block"> 
+											<table>
+												<tr>
+													<td>号码</td>
+													<td><input type="text" placeholder='移动、联通、电信'></td>
+												</tr>
+												<tr>
+													<td>面值</td>
+													<td><input type="text" placeholder='100元'>￥98.0-￥100.0</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="chong">快速充值</a></td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hot">HOT</a><a href="#" class="qiang">抢百万代金卷</a></td></tr>
+											</table>										
+										</div>
+										<!-- 2 -->
+										<div class="divS">
+											<table>
+												<tr>
+													<td>号码</td>
+													<td><input type="text" placeholder='移动、联通、电信'></td>
+												</tr>
+												<tr>
+													<td>流量</td>
+													<td>
+														<select name="" id="">
+															<option value="">全国</option>
+															<option value="">省内</option>
+														</select>
+														<select name="" id="">
+															<option value="">50M</option>
+															<option value="">100M</option>
+															<option value="">200M</option>
+															<option value="">300M</option>
+														</select>
+														<span>￥7.5-10.0</span>
+													</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="chong">快速充值</a></td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hot">HOT</a><a href="#" class="qiang">抢百万代金卷</a></td>
+												</tr>
+											</table>
+											
+										</div>
+									<!-- 3 -->
+										<div class="divS">
+											<table>
+												<tr>
+													<td>号码</td>
+													<td><input type="text" placeholder='支持部分地区'></td>
+												</tr>
+												<tr>
+													<td>月费</td>
+													<td>
+														<select name="" id="">
+															<option value="">138元</option>
+															<option value="">998元</option>
+														</select>
+		
+														<span>500分钟,1G流量</span>
+													</td>
+												</tr>
+												<tr>
+													<td><a href="#" class="chong">办理变更</a></td>
+												</tr>
+												<tr>
+													<td><a href="#" class="hot">HOT</a><a href="#" class="qiang">4Gh</a></td>
+												</tr>
+											</table>											
+										</div>
+									</div>	
+								</div>		<!-- 话费部分借宿 -->
+
+
+							
+								<!-- 机票			 -->
+								<div class="div-two  jiPao">
+										<!-- <div class="div-two"> -->
+										<ul>
+											<li><a href="#">国内机票</a></li>
+											<li><a href="#">国际/港澳台</a></li>
+											<li><a href="#">特惠活动</a></li>
+										</ul>
+									<!-- 总div？ -->
+										<div>
+									<!-- 1 -->
+											<div class="divS" style="display:block"> 
+												<table >
+													<tr class="checkbox">
+														<td><input type="radio" name="sex">单程</td>
+														<td><input type="radio" name="sex">往返</td>
+													</tr>
+													<tr>
+														<td>
+															<div>
+															出发
+															</div>
+														</td>
+														<td><input type="text" placeholder='100元'>￥98.0-￥100.0</td>
+													</tr>
+													<tr>
+														<td><a href="#" class="chong">机票查询</a></td>
+													</tr>
+													<tr>
+														<td><a href="#" class="hot">HOT</a><a href="#" class="qiang">当季热门特惠机票></a></td></tr>
+												</table>										
+											</div>
+											<!-- 2 -->
+											<div class="divS">
+												<table>
+													<tr class="checkbox">
+														<td><input type="radio" name="sex">单程</td>
+														<td><input type="radio" name="sex">往返</td>
+													</tr>
+													<tr>
+														<td>流量</td>
+														<td>
+															<select name="" id="">
+																<option value="">全国</option>
+																<option value="">省内</option>
+															</select>
+															<select name="" id="">
+																<option value="">50M</option>
+																<option value="">100M</option>
+																<option value="">200M</option>
+																<option value="">300M</option>
+															</select>
+															<span>￥7.5-10.0</span>
+														</td>
+													</tr>
+													<tr>
+														<td><a href="#" class="chong">机票查询</a></td>
+													</tr>
+													<tr>
+														<td><a href="#" class="hot">HOT</a><a href="#" class="qiang">国际机票任性搜</a></td>
+													</tr>
+												</table>
+												
+											</div>
+										<!-- 3 -->
+											<div class="divS">
+												<table>
+													<tr>
+														<td>号码</td>
+														<td><input type="text" placeholder='支持部分地区'></td>
+													</tr>
+													<tr>
+														<td>月费</td>
+														<td>
+															<select name="" id="">
+																<option value="">138元</option>
+																<option value="">998元</option>
+															</select>
+			
+															<span>500分钟,1G流量</span>
+														</td>
+													</tr>
+													<tr>
+														<td><a href="#" class="chong">办理变更</a></td>
+													</tr>
+													<tr>
+														<td><a href="#" class="hot">HOT</a><a href="#" class="qiang">4Gh</a></td>
+													</tr>
+												</table>											
+											</div>
+										</div>	
+									</div>	
+								<!-- </div> -->
+								<div class="div-two"><a href="#">电影票</a></div>
+								<div class="div-two"><a href="#">游戏</a></div>
+							</div>
+							
+						</div>
+
+						<!-- <div class="mydiv-show">机票</div>
+						<div class="mydiv-show">电影票</div>
+						<div class="mydiv-show">游戏</div>  -->
+					</div> 
+				</div>
+			</div>
+
+			<div class="shiyi"><img src="images/shiyi.jpg" alt=""></div>
+
+	</div>
+	<!-- 右侧div 点击出来-->
+	<div id="showClick">
+		<div class="right-click" class="">
+		
+		</div>
+		<img src="images/img_cebian.jpg" alt="" class="imgclick">
+	</div>
+	
+
+	<script>
+		$(function (){
+			$('.class1').on('mouseenter',function (){$('.show').slideDown(100);$('.class1').css('background','#fff')})
+			$('#headerL>li').on('mouseleave',function(){$('.show').slideUp(100);$('.class1').css('background','')})
+			$('.rtB').on('mouseenter',function (){
+				$(this).next().slideDown(100)
+				$(this).parent().css('background','#fff');
+				$(this).parent().on('mouseleave',function (){
+					$(this).children().last().slideUp(100)
+					$(this).css('background','')
+				})	
+
+			})
+			//划过变色头部
+			$('.red').on('mouseenter',function(){$(this).css('color','red');$(this).on('mouseleave',function(){$(this).css('color','')}) })		
+			$('.wu1').css('width','140px')
+			$('.wu1').on('mouseenter',function(){$('.wu2').css('display','block')})
+			$('#gouwu').on('mouseleave',function(){$('.wu2').css('display','none')})
+			$('.nav2 a:eq(0)').css('color','red')
+			$('.nav2 a:gt(0)').css('color','#333').on('mouseenter',function(){$(this).css('color','red');$(this).on('mouseleave',function(){$(this).css('color','#333')}) })
+			//$('.mLeft').css({width:'208px',height:'465px',background:'#c81623'})
+			$('.shi-li li a').on('mouseenter',function(){$(this).css('color','red');$(this).on('mouseleave',function(){$(this).css('color','#333')}) })
+
+			//左侧菜单侧边划过
+			$('#show-ul li ').on('mouseenter',function(){
+				$(this).css('background','grey')
+				$(this).children('div').fadeIn(100)
+				$(this).on('mouseleave',function(){
+					$(this).css('background','')
+					$(this).children('div').fadeOut(100)
+				})
+			})	
+			// 图片轮播部分
+			var changColor=document.getElementsByClassName('a-num')[0].getElementsByTagName('a');
+			var color1=$('.a-num a:eq(0)').css('background','#b61b1f')
+			var  root=$('.changImg');
+			var imgs='images/img';
+			var img=$('.images');
+
+			var index=1;
+			function changImg(){
+				index++;
+				if(index==7){
+					index=1;
+				}
+				
+				img.attr('src',imgs+index+'.jpg');
+				var arr=$('.a-num a');
+				arr.each(function(index,elem){
+					$(this).css('background','#666')
+				})
+				changColor[index-1].style.background='#b61b1f';
+				$('.a-num a').attr('class','changColor');
+			}	
+			
+			var timer=setInterval(changImg,2000)
+				$('.a-num a').on('mouseenter',function(){
+					$('.a-num a').css('background','#666')
+					$(this).css('background','#b61b1f')
+					clearInterval(timer)
+					 index=$(this).html();
+					img.attr('src',imgs+index+'.jpg');
+					$(this).on('mouseleave',function(){
+						clearInterval(timer)
+						timer=setInterval(changImg,2000)
+					})
+
+				})
+
+
+
+
+			img.hover(function(){
+				clearInterval(timer)
+				console.log(index)
+				$('.dayu').on('click',function(){
+					index--;
+					console.log(index+'------------------')
+				})
+				$('.dayu,.xiaoyu').css('display','block');
+			})
+			img.mouseleave(function(){
+				timer=setInterval(changImg,2000)
+			})
+
+				$('.main-cai li:eq(1)').css('background-image','images/gouwu.jpg')
+			
+				var liclik=$('.shouDiv');
+				var shouDiv=$('.mydiv-show');
+				console.log(shouDiv.length)
+				//向上滑动 要用overflow:hidden
+				$('.shouDiv').mouseenter(function(index){
+					var index=$('.shouDiv').index($(this))//获得当前是第几个li 
+					console.log($(this).index()+'--------------------------------')
+					//向上移动需要 overflow hidden ;display='none'会让其失去位置；对应显示的display变成block就会对应的显示了
+					//$('.mydiv-show').eq(index).css('display','block').siblings().css('display','none')
+					$('.right-go').slideUp({});
+					$('.div-two').eq(index).css('display','block').siblings().css('display','none')
+					$('.li-two li').eq(index).css('border-bottom','none').css('border-top','2px solid red').siblings().css('border','1px solid #e4e4e4')
+
+					$(this).css('display','block');
+					console.log($('.divS'))
+
+				})
+ 	
+				// 2及菜单变色
+			
+				$('.li-two li a').mouseenter(function(index){
+					var index=$('.li-two li a').index($(this));
+					//改变上下边框的颜色
+					$('.li-two li').eq(index).css('border-bottom','none').css('border-top','2px solid red').siblings().css('border','1px solid #e4e4e4')
+					$(this).css('color','red').parent().parent().children().children().css('color','');
+					$(this).css('color','red');
+					$('.div-two').eq(index).css('display','block').siblings().css('display','none')
+				})
+				//3级联动
+				$('.divS').css('display','none').css('position','absolute')
+				$('.div-two li a').mouseenter(function(index){
+					var index=$('.div-two li a').index($(this));//获得点击的第几个
+					console.log(index);
+					$(this).css('color','red').parent().siblings().children().css('color','')
+					$('.divS').eq(index).css('display','block').siblings().css('display','none')
+				})
+
+				$('input :checkbox ').css('width','30px')
+
+				// 全局右侧？
+				$('.imgclick').click(function(){
+					 left=$('#showClick').position().left;
+					$('#showClick').animate({						
+						width:'280px'
+					},500,function(){
+						if( left==$('#showClick').position().left){
+							$('#showClick').animate({width:'50px'})
+						}
+					})
+				});
+					// if(!$('#showClick').is(":animate")){
+					// 	$('#showClick').animate({						
+					// 		width:'50px'
+					// 	},500)
+					// }
+				// $('.imgclick').click(function(){
+				// 	$('#showClick').animate({						
+				// 		width:'50px'
+				// 	},500);
+
+				// })})
+
+				
+
+		})
+	</script>
+	
+</body>
+</html>

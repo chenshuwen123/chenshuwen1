@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='../jquery-3.1.1.js'></script>
+</head>
+<body>
+	<button>隐藏</button>
+	<button>显示</button>
+	<button>再说</button>
+	<div id='container'>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<script>
+	$(function (){
+		$('#container div').css('width','200px').css('height','200px')
+		$('#container div:first').css('background','gold')
+		$('#container div:eq(1)').css('background','red')
+		$('#container div:last').css('background','green')
+		//$('#container  div:first').hide(5000)
+	/*	$('button:first').on('click',function (){
+			$('div').hide(5000,'linear',function (){
+				console.log('动画已经执行完')
+			})
+		})
+
+
+		$("button:eq(1)").on('click',function (){
+			$('div').show(5000,'linear',function (){
+				$('div').fadeOut(5000);
+				$('div').fadeIn(5000);
+			})
+		})
+*/
+
+	/*	function hide(){
+			$('#container div').stop().hide(1000,'linear',show)
+		}
+		function show(){
+			$('#container div').stop().show(1000,'linear',hide)
+		}
+
+		$('button:last').on('click',function (){
+			$('#container div').hide(1000,'linear',show)
+		})
+*/
+	
+
+
+	
+		function headler(){
+			$('#container div').animate(1000,'linear',headler)
+		}
+		$('button:last').on('click',headler)
+
+
+
+
+
+	}) 
+
+
+
+	</script>
+</body>
+</html>

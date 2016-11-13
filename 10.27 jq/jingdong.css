@@ -1,0 +1,111 @@
+*{margin: 0;padding: 0;font-size: 12px}
+		ul{list-style: none;}
+		a{text-decoration: none;color: #333}
+		body{width: 1583px;height: 3000px;margin: 0 auto}
+		/*头*/
+		#header{width: 1583px;height: 35px;background: #f1f1f1;}
+		#headerL{padding-left: 190px;list-style: none;line-height: 35px;float: left;height: 35px}
+		.class1{width: 100px;font-size: 12px;text-align: center;height: 35px}
+		.show{width: 300px;height: 200px;background: #fff;display: none;border: 1px solid #f1f1f1;border-top: none;}
+		#headerL li{width: 50px;z-index: 10;position: absolute;}
+
+		 #rightUl { right: 50px; font-size: 12px;margin-left:500px; height: 35px}
+		 #rightUl li{float: left;text-align: left;padding: 0px 10px;height: 35px;line-height: 35px}
+		 #rightUl li a{color: #666;}
+		 #span1 a{color:red;}
+			
+
+		#wD{width: 200px;height: 200px;border: 1px solid #f1f1f1;z-index: 10;display: none;position: absolute;top: 33px ;margin-left: -11px;z-index: 1;background: #fff;}	
+		#right-ke{width: 200px;height: 200px;border: 1px solid #f1f1f1;z-index: 10;display: none; position: absolute;top: 33px;margin-left:-142px;background: #fff;}	
+		#rightW{width: 1472px;height: 200px;border: 1px solid #f1f1f1;z-index: 10;display: none;position: absolute; top: 33px;margin-left: -1418px;background: #fff;}	
+		/*、导航*/
+		 .img{width:1583px}
+
+		 #nav{height: 178px;}
+		
+		 #nav .img1{margin-top: 28px;float: left;}
+		.nav1 span{color: red;top: 200px;display: inline-block;margin-top: 40px;}
+		.nav1{width: 340px;height: 100px;float: left;margin-left: 200px}
+		.nav2{float: left;}
+		.nav2 ul{width: 500px;height: 30px}
+		.nav2 input{width: 455px;height: 30px;border: 1px solid red;margin-top: 20px}
+		.nav2 button{width: 80px;height: 34px;background: red}
+		.nav2 li{float: left;margin-left: 10px}
+		#gouwu{float: left;margin-left: 190px;height: 36px;width: 142px;margin-top: 15px;}
+		#gouwu .wu1{width: 140px;height: 35px;border: 1px solid #dfdfdf;line-height: 35px;text-align: center;margin: 14px 52px;position: absolute;right:130px;top: 130px}
+		#gouwu .wu2{height: 100px;width: 350px;display: none;position: absolute;right:180px;top: 180px;border: 1px solid #dfdfdf;background: #fff}
+		#shop{position: absolute;padding: 1px 2px;display: inline-block;border-radius:7px 7px 7px 0;min-width: 12px;right: 202px;top: 147px}
+		.gt{margin-left: 20px;}
+
+		#nav-d{height: 45px;border-bottom:2px solid #b1191a }
+		.nav-left{width: 208px;height: 45px;background: #b1191a;float: left;margin-left: -340px;line-height: 45px;z-index: 10}
+		.nav-left a{font-size: 14px;margin-left: 10px}
+		.nav-right ul{height: 50px; float:left;margin-left: -140px;}
+		.nav-right ul li{display: inline-block;line-height:50px;margin-left: 40px; }
+		.nav-right ul li a{font-size: 15px;}
+		.picB{width: 300px;height: 40px;float: left;}
+		.shiwan{margin-left: 100px;}
+
+		/*正文*/
+		#main {height: 800px;width: 1500px;}
+		.mLeft {margin-left: 200px;width:208px;height:465px;background:#c81623;float: left;margin-top: -4px}
+		.mLeft ul li{height: 30px;line-height: 30px}
+		.mLeft ul {z-index: 10}
+		.mLeft ul li a{font-size: 14px;height: 30px;color: #fff}
+	
+	 	.main-left a{width:208px;line-height: 30px;top: 0px} 
+
+	 	.show-div{width: 1020px;height: 470px;background: #fff;border: 1px solid grey;
+	 		position: absolute;top: 258px;left: 408px;display: none;z-index: 10}
+		/*中间*/
+		#main-center{width: 730px;height: 455px;float: left;position: relative;margin-top: 10px;margin-left: 10px}
+		.dayu,.xiaoyu{width: 20px;height: 20px;background: grey;position: absolute;opacity: 0.5;text-align: center;line-height: 20px;font-weight: 800px;font-size: 18px;display: none;}
+		.dayu{right: 10px;top: 200px}
+		.xiaoyu{left: 10px;top: 200px}
+		.a-num{position: absolute;left: 100px;bottom: 20px;}
+		.a-num a{width: 20px;height: 20px;background: #666;border-radius: 50%;display: inline-block;text-align: center;line-height: 20px;}
+		/*right*/
+		#main-right{width: 260px;height: 375px;background: #ffffff;float: left;margin:0 0 0 10px;border: 1px solid #e4e4e4}
+		.m_right h2{border-bottom:1px dashed #e4e4e4;font-size: 15px;height: 30px;line-height: 30px;padding-left: 15px; }
+		.gengD{padding-left: 145px}
+		/*主3及菜单*/
+		.main-cai {width: 260px;height: 219px;overflow: hidden;}
+		#main-right .mr ul{margin-left:15px;margin-top: 10px}
+		.mr li{height: 23px;line-height: 23px;}
+		.mr li span{margin-right: 5px;font-weight: 700;}
+		
+		.right-go{width: 290px;height: 210px;}
+
+	/*第一个外层ul*/
+		.main-cai .right-go ul{width: 260px;}
+		.main-cai .right-go li{width: 63px;height: 71px;border: 1px solid #e4e4e4;float: left;}
+		.main-cai .right-go li a{width: 71px;height:71px;display: inline-block;text-align: center;line-height: 15px}
+		.main-cai img{margin-top: 20px}
+	/*显示隐藏div   溢出隐藏  所有对象 。index$(this) var index=*/  
+
+	/*2级的 -2级div宽度- 2级的li修饰 -行高让内容有间距a*/
+		.div-two {width: 260px;height: 190px;} 
+		.div-two  li{display: inline-block;width: 60px;margin-top: 10px;text-align: center;}
+		.divS tr{line-height: 35px}
+		.divS td{float: left;text-align: center;border: none;margin-left: 5px;}
+
+		.main-cai .mydiv-show {width: 260px;height: 219px;display: inline-block; }
+		.li-two li{width: 63px;height: 30px;float: left;line-height: 30px;border:1px solid #e4e4e4;text-align: center}
+		.mydiv-show{height: 30px;overflow: hidden; }
+		.li-two {height: 30px;}
+			
+		.div-two ul{width: 260px;height: 32px;}
+		
+		/*3及菜单-宽高*/
+		.divS {height: 157px;width: 260px;}
+		.divS input{width: 120px;height: 20px}
+		.chong{display: inline-block;width: 80px;height: 30px;margin: 10px 0 0 10px;line-height: 30px;background: red}
+		.hot{color: red;}
+		.qiang{color: green;margin-left: 10px;}
+		.liuL{height: 200px;}
+		.jiPao li{width: 70px;}
+		.checkbox input{width: 30px;height: 14px;}
+		.shiyi img{width: 263px;margin-top: 14px;margin-left: 10px;display: inline-block;}
+		.right-click {width: 200px;height: 900px;background: grey;position:fixed;margin-left: 80px;}
+		#showClick{width: 50px;background: red;height: 900px;position: absolute;right: 0px;top: 0;position: absolute;overflow: hidden;}
+		.imgclick{position: absolute;left:0px;top: 0}

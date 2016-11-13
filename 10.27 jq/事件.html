@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='../jquery-3.1.1.js'></script>
+</head>
+<body>
+		<button>点我啊</button>
+		<button>点我啊</button>
+		<script>
+		//事件处理函数
+		function handerBtn(){
+			console.log('我是事件1处理器')
+		}
+		//注册
+		$('button:first').on('click',handerBtn).trigger('click')
+		/*$('button:last').on('mouseover',function(){
+			$('button:first').trigger('click')
+		})*/
+		</script>
+</body>
+</html>
